@@ -9,6 +9,9 @@ var objPeople = [
 		password: "admin"
 	},
 ]
+function quest(){
+	console.log(username + " is logged in!!!" + alert("welcome") + myhide() + mycontent())
+}
 
 function getInfo() {
 	var username = document.getElementById('username').value
@@ -43,6 +46,16 @@ function mycontent() {
 	  x.style.display = "block";
 	}
   }
+// for main after update button is pressed
+function mymain() {
+	var x = document.getElementById("main");
+	if (x.style.display === "none") {
+	  x.style.display = "block";
+	} else {
+	  x.style.display = "none";
+	}
+  }
+
 
 // +++++++++++++++++++++BOOTSTRAP CODE
 rootUrl = 'http://localhost:9091/';
@@ -62,20 +75,25 @@ function retailurelogin() {
 }
 
 function logout(){
-	console.log('Charlotte show/hide logout');
-	document.getElementById('LogOut').style.display ="none";
-	document.getElementById('lastOrder').style.display ="none";
-	document.getElementById('basket').style.display ="none";
-	document.getElementById('Shopping').style.display ="none";
-	document.getElementById('home').style.display ="";
-	document.getElementById('login').style.display ="";
-	
+	var x = document.getElementById("hide");
+	if (x.style.display === "block") {
+	  x.style.display = "none";
+	} else {
+	  x.style.display = "block";
+	}
+	var x = document.getElementById("content");
+	if (x.style.display === "none") {
+	  x.style.display = "block";
+	} else {
+	  x.style.display = "none";
+	}
 }
 
 function shopping(){
 	console.log('Charlotte show/hide shopping');
 	document.getElementById('Shopping').style.display ="none";
 	document.getElementById('addStock').style.display ="";
+	console.log(alert("update button pressed") + mymain())
 }
 function login(){
 	console.log('Charlotte show/hide shopping');
@@ -124,3 +142,28 @@ addclothes = function() {
 		  }       
 		}
 	  }
+
+// Accordion 
+function myAccFunc() {
+	var x = document.getElementById("demoAcc");
+	if (x.className.indexOf("w3-show") == -1) {
+	  x.className += " w3-show";
+	} else {
+	  x.className = x.className.replace(" w3-show", "");
+	}
+  }
+  
+  // Click on the "Jeans" link on page load to open the accordion for demo purposes
+  document.getElementById("myBtn").click();
+  
+  
+  // Open and close sidebar
+  function w3_open() {
+	document.getElementById("mySidebar").style.display = "block";
+	document.getElementById("myOverlay").style.display = "block";
+  }
+   
+  function w3_close() {
+	document.getElementById("mySidebar").style.display = "none";
+	document.getElementById("myOverlay").style.display = "none";
+  }

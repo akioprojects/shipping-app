@@ -211,7 +211,7 @@ body {
     
     .right {
       right: 0;
-      background-color: rgb(138, 131, 131);
+      background-color: red;
     }
     
     .centered {
@@ -236,7 +236,7 @@ body {
     }
     
     #myInput {
-      background-image: url('/css/search_icon.png');
+      background-image: url('/css/searchicon.png');
       background-position: 10px 10px;
       background-repeat: no-repeat;
       width: 100%;
@@ -289,3 +289,5 @@ body {
   background-color: #04AA6D;
   color: white;
 }
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
